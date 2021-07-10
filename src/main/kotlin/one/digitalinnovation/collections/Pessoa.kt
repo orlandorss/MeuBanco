@@ -3,6 +3,8 @@ package one.digitalinnovation.collections
 
 
 abstract class Pessoa (//alter class
- val nome: String,
+ val name: String,
  val cpf: String
-)
+){
+
+}

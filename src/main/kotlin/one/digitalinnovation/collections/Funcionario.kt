@@ -2,11 +2,19 @@ package one.digitalinnovation.collections
 
 import java.math.BigDecimal
 
-abstract class Funcionario(
-    nome: String,
+abstract class Employee(
+    name: String,
     cpf: String,
-    val salario: BigDecimal,
+    val salary: Double,
 
-) : Pessoa(nome, cpf){
-    abstract fun calculoaux();
+    ) : Pessoa(name, cpf){
+ protected  abstract fun assistance():Double
+
+
+    override fun toString(): String =  """
+       Name: $name
+       CPF: $cpf
+       Salary: $salary
+       Assistance: ${assistance()}
+     """.trimIndent()
 }
